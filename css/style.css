@@ -1,0 +1,55 @@
+/* Tipografía */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+/* Colores */
+:root {
+  --primary-green: #2E7D32;
+  --secondary-grey: #F8F9FA;
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  list-style: none;
+  background-color: var(--primary-green);
+  margin: 0;
+  padding: 10px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  color: var(--primary-green);
+}
+
+/* Secciones */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: var(--secondary-grey);
+  border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: var(--primary-green);
+  color: white;
+}
