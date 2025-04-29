@@ -1,4 +1,4 @@
-/* Tipografía */
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -7,13 +7,11 @@ body {
   color: #333;
 }
 
-/* Colores */
 :root {
   --primary-green: #2E7D32;
   --secondary-grey: #F8F9FA;
 }
 
-/* Navegación */
 nav ul {
   display: flex;
   list-style: none;
@@ -32,12 +30,10 @@ nav ul li a {
   font-weight: bold;
 }
 
-/* Encabezados */
 h1, h2, h3 {
   color: var(--primary-green);
 }
 
-/* Secciones */
 section {
   padding: 20px;
   margin: 20px auto;
@@ -46,7 +42,6 @@ section {
   border-radius: 5px;
 }
 
-/* Pie de página */
 footer {
   text-align: center;
   padding: 10px 0;
