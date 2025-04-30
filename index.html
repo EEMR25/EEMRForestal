@@ -3,57 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - M.C. Erick Mendoza </title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Galería con Modal</title>
   <style>
-    ul {
-      list-style: none;       /* Quitar los puntos de la lista */
-      padding: 0;
-      margin: 20px auto;      /* Centrar la lista horizontalmente */
-      text-align: center;     /* Centrar el texto dentro de la lista */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
     }
 
-    ul li {
-      font-size: 1.2rem;      /* Tamaño del texto */
-      margin: 10px 0;         /* Espaciado entre elementos */
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .modal.active {
+      display: flex;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="formacion.html">Formación</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="publicaciones.html">Publicaciones</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <main>
     <section>
-      <h1>Erick Eduardo Mendoza Ruiz </h1>
-      <p>Soy un profesional del sector forestal apasionado por la naturaleza y comprometido con su conservación. 
-        Desde 2019, he trabajado como especialista en impacto ambiental, desarrollando estrategias de diagnóstico y prescripción. 
-        También cuento con experiencia en muestreo de vegetación, aplicando metodologías avanzadas para la recopilación y análisis de datos ecológicos.
-        Mi formación académica incluye una Ingeniería Forestal y una Maestría en Ciencias Forestales, con un enfoque en hidrología, ecología del paisaje y del fuego, áreas en las que he centrado mi trabajo de investigación en la Sierra de Guadalupe. 
-        Actualmente, curso el Doctorado en Ciencias de Información Geográfica, donde me especializo en tecnologías avanzadas como el análisis de datos LiDAR, que permiten abordar desafíos complejos relacionados con la gestión y conservación de los recursos naturales.
-      </p>
+      <h1>Galería de Imágenes</h1>
+      <div class="gallery">
+        <img src="i1.jpg" alt="Descripción de la imagen 1">
+        <img src="i2.jpg" alt="Descripción de la imagen 2">
+        <img src="i3.jpg" alt="Descripción de la imagen 3">
+        <img src="i4.jpg" alt="Descripción de la imagen 4">
+        <img src="i5.jpg" alt="Descripción de la imagen 5">
+      </div>
     </section>
   </main>
-  
-  <ul>
-    <li>📊 Análisis de datos (espacial y estadístico) </li>
-    <li>🌧️ Hidrología forestal</li>
-    <li>🌳 Manejo forestal</li>
-    <li>🔥 Ecología del fuego </li>
-    <li>🛠  Evaluación de impacto ambiental</li>
-    <li>🌐 Procesamiento de datos geoespaciales</li>
-  </ul>
 
-  <footer>
-    <p>&copy; Contacto: 5536366287. mcerickmendoza23@gmail.com.</p>
-  </footer>
+  <div class="modal" id="modal">
+    <img src="" alt="Imagen ampliada" id="modalImage">
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    const images = document.querySelectorAll('.gallery img');
+
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        modalImage.src = image.src;
+        modal.classList.add('active');
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
 </body>
 </html>
