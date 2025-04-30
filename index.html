@@ -3,8 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería con Modal</title>
+  <title>Inicio - M.C. Erick Mendoza</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    ul li {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -49,15 +62,45 @@
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="formacion.html">Formación</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
     <section>
-      <h1>Galería de Imágenes</h1>
+      <h1>Erick Eduardo Mendoza Ruiz</h1>
+      <p>Soy un profesional del sector forestal apasionado por la naturaleza y comprometido con su conservación. 
+        Desde 2019, he trabajado como especialista en impacto ambiental, desarrollando estrategias de diagnóstico y prescripción. 
+        También cuento con experiencia en muestreo de vegetación, aplicando metodologías avanzadas para la recopilación y análisis de datos ecológicos.
+        Mi formación académica incluye una Ingeniería Forestal y una Maestría en Ciencias Forestales, con un enfoque en hidrología, ecología del paisaje y del fuego, áreas en las que he centrado mi trabajo de investigación en la Sierra de Guadalupe. 
+        Actualmente, curso el Doctorado en Ciencias de Información Geográfica, donde me especializo en tecnologías avanzadas como el análisis de datos LiDAR, que permiten abordar desafíos complejos relacionados con la gestión y conservación de los recursos naturales.
+      </p>
+    </section>
+
+    <ul>
+      <li>📊 Análisis de datos (espacial y estadístico)</li>
+      <li>🌧️ Hidrología forestal</li>
+      <li>🌳 Manejo forestal</li>
+      <li>🔥 Ecología del fuego</li>
+      <li>🛠 Evaluación de impacto ambiental</li>
+      <li>🌐 Procesamiento de datos geoespaciales</li>
+    </ul>
+
+    <section>
+      <h2>Galería de Imágenes</h2>
       <div class="gallery">
-        <img src="i1.jpg" alt="Descripción de la imagen 1">
-        <img src="i2.jpg" alt="Descripción de la imagen 2">
-        <img src="i3.jpg" alt="Descripción de la imagen 3">
-        <img src="i4.jpg" alt="Descripción de la imagen 4">
-        <img src="i5.jpg" alt="Descripción de la imagen 5">
+        <img src="fotos/i1.jpg" alt="Descripción de la imagen 1">
+        <img src="fotos/i2.jpg" alt="Descripción de la imagen 2">
+        <img src="fotos/i3.jpg" alt="Descripción de la imagen 3">
+        <img src="fotos/i4.jpg" alt="Descripción de la imagen 4">
+        <img src="fotos/i5.jpg" alt="Descripción de la imagen 5">
       </div>
     </section>
   </main>
@@ -65,6 +108,10 @@
   <div class="modal" id="modal">
     <img src="" alt="Imagen ampliada" id="modalImage">
   </div>
+
+  <footer>
+    <p>&copy; Contacto: 5536366287. mcerickmendoza23@gmail.com.</p>
+  </footer>
 
   <script>
     const modal = document.getElementById('modal');
