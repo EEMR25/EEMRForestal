@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formación - EEMR Forestal</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    hr {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 20px 0;
+    }
+
+    .fixed-images {
+      position: fixed;
+      top: 50%; /* Centrado verticalmente en la pantalla */
+      right: 20px; /* Distancia desde el borde derecho */
+      transform: translateY(-50%); /* Ajuste para centrar correctamente */
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* Espaciado entre las imágenes */
+    }
+
+    .fixed-images img {
+      width: 100px; /* Tamaño de las imágenes */
+      height: auto;
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .fixed-images img:hover {
+      transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,11 +53,27 @@
       <h1>Formación</h1>
       <ul>
         <li><strong>Licenciatura:</strong> Ingeniería Forestal - Universidad Autónoma Chapingo (2016-2020)</li>
-        <li><strong>Maestría:</strong> Gestión Ambiental - Universidad Internacional (2021-2023)</li>
+      </ul>
+      <hr> <!-- Línea de separación -->
+      <ul>
+        <li><strong>Maestría:</strong>  Ciencias Forestales - Universidad Autónoma Chapingo (2021-2023)</li>
+      </ul>
+      <hr> <!-- Línea de separación -->
+      <ul>
+        <li><strong>Doctorado:</strong> Ciencias de Información Geoespacial- Centro Geo (2024-2028)</li>
+      </ul>
+      <hr> <!-- Línea de separación -->
+      <ul>
         <li><strong>Certificaciones:</strong> Manejo Sostenible de Bosques, GIS Avanzado</li>
       </ul>
     </section>
   </main>
+
+  <!-- Imágenes fijas a la derecha -->
+  <div class="fixed-images">
+    <img src="fotos/log1.png" alt="Imagen 1">
+    <img src="fotos/log2.png" alt="Imagen 2">
+  </div>
 
   <footer>
     <p>&copy; 2025 EEMR Forestal. Todos los derechos reservados.</p>
