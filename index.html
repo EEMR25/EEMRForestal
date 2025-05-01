@@ -3,28 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - EEMR Forestal</title>
-  <link rel="stylesheet" href="estilos.css">
+  <title>Formación - EEMR Forestal</title>
+  <link rel="stylesheet" href="css/style.css"> mira el estilo que llevaba
+  <style>
+    hr {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 20px 0;
+    }
+
+    .fixed-images {
+      position: fixed;
+      top: 30%; /* Centrado verticalmente en la pantalla */
+      right: 20px; /* Distancia desde el borde derecho */
+      transform: translateY(-50%); /* Ajuste para centrar correctamente */
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* Espaciado entre las imágenes */
+    }
+
+    .fixed-images img {
+      width: 150px; /* Tamaño de las imágenes */
+      height: auto;
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .fixed-images img:hover {
+      transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>EEMR Forestal</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="formacion.html">Formación</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="formacion.html">Formación</a></li>
-      <li><a href="proyectos.html">Proyectos</a></li>
-      <li><a href="publicaciones.html">Publicaciones</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <h2>Bienvenido a EEMR Forestal</h2>
-    <p>Explora nuestras secciones para conocer más sobre nuestra formación, proyectos y publicaciones.</p>
+    <section>
+      <h1>Formación</h1>
+      <ul>
+        <li><strong>Licenciatura:</strong> Ingeniería Forestal - Universidad Autónoma Chapingo (2016-2020)</li>
+      </ul>
+      <hr> <!-- Línea de separación -->
+      <ul>
+        <li><strong>Maestría:</strong> Ciencias Forestales - Universidad Autónoma Chapingo (2021-2023)</li>
+      </ul>
+      <hr> <!-- Línea de separación -->
+      <ul>
+        <li><strong>Doctorado:</strong> Ciencias de Información Geoespacial - Centro Geo (2024-2028)</li>
+      </ul>
+      <hr> <!-- Línea de separación -->
+      <ul>
+        <li><strong>Cursos:</strong> Curso básico teórico-práctico de prevención y combate de incendios forestales (Marzo 2024), Introducción al uso y representación de información geoespacial (Junio y Julio 2024)</li>
+      </ul>
+      <hr> <!-- Línea de separación -->
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <ul style="flex: 1; list-style: none; padding: 0;">
+          <li>🌳 Dendrología</li>
+          <li>📊 Estadística (regresión lineal multivariada, diseño experimental y de muestreo)</li>
+          <li>💻 Programación (Python, VBasic y HTML)</li>
+          <li>🏢 Administración de empresas y emprendimientos</li>
+          <li>🪵 Anatomía y tecnología de la madera</li>
+          <li>🖥️ Diseño asistido por computadora</li>
+          <li>🌱 Edafología forestal</li>
+          <li>📚 Investigación de operaciones</li>
+          <li>🌲 Ecología forestal</li>
+          <li>📏 Epidometría</li>
+          <li>📸 Fotogrametría</li>
+          <li>🗺️ Sistemas de información geográfica</li>
+          <li>🗾 Fitogeografía</li>
+          <li>🚜 Maquinaria forestal</li>
+          <li>📈 Fundamentos de mercadotecnia</li>
+          <li>🛰️ Percepción remota</li>
+        </ul>
+        <ul style="flex: 1; list-style: none; padding: 0;">
+          <li>🦉 Administración de fauna silvestre</li>
+          <li>🌿 Sanidad forestal</li>
+          <li>🌍 Administración y evaluación de recursos naturales</li>
+          <li>⚙️ Ingeniería del trabajo</li>
+          <li>🌾 Agroforestería</li>
+          <li>🏙️ Dasonomía urbana</li>
+          <li>📝 Evaluación de impacto ambiental</li>
+          <li>🛣️ Ingeniería de caminos forestales</li>
+          <li>🚛 Sistemas de abastecimiento forestal</li>
+          <li>🔥 Ecología del fuego</li>
+          <li>🪲 Control biológico</li>
+          <li>🏞️ Ecología del paisaje</li>
+          <li>🌱 Calidad de planta y viveros</li>
+          <li>🌳 Reforestación</li>
+          <li>🌲 Silvicultura ecológica</li>
+          <li>🌴 Silvicultura de plantaciones</li>
+          <li>📋 Producción y rendimiento de rodales</li>
+          <li>🌳 Arboricultura</li>
+          <li>🖼️ Análisis digital de imágenes</li>
+          <li>💾 Bases de datos</li>
+        </ul>
+      </div>
+    </section>
   </main>
+
+  <!-- Imágenes fijas a la derecha -->
+  <div class="fixed-images">
+    <img src="fotos/log1.png" alt="Imagen 1">
+    <img src="fotos/log2.png" alt="Imagen 2">
+  </div>
 
   <footer>
     <p>&copy; 2025 EEMR Forestal. Todos los derechos reservados.</p>
