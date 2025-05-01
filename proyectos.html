@@ -4,11 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyectos - EEMR Forestal</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Colores y fuentes adaptados */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8f4; /* Fondo verde claro */
+      color: #333; /* Texto en gris oscuro */
+    }
+
+    header {
+      background-color: #2e7d32; /* Verde oscuro */
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #388e3c; /* Verde principal */
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1b5e20; /* Verde más oscuro */
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2e7d32; /* Verde oscuro */
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555; /* Gris medio */
+      margin-bottom: 30px;
+    }
+
+    /* Diseño de las tarjetas de proyectos */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      color: #2e7d32; /* Verde oscuro */
+      margin: 15px;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 15px 15px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin: 15px;
+      padding: 10px 20px;
+      background-color: #388e3c; /* Verde principal */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background-color: #1b5e20; /* Verde más oscuro */
+    }
+
+    footer {
+      background-color: #2e7d32; /* Verde oscuro */
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Proyectos</h1>
+    Proyectos - EEMR Forestal
   </header>
 
   <nav>
@@ -17,21 +143,36 @@
       <li><a href="formacion.html">Formación</a></li>
       <li><a href="proyectos.html">Proyectos</a></li>
       <li><a href="publicaciones.html">Publicaciones</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
 
   <main>
-    <h2>Explora nuestras categorías de proyectos</h2>
-    <div class="categories">
-      <div class="category">
-        <a href="proyectos_profesional.html">Proyectos Profesionales</a>
+    <h1>Proyectos Destacados</h1>
+    <p>Conoce algunos de los proyectos más importantes en los que hemos trabajado en las áreas profesional, preprofesional y académica.</p>
+    
+    <div class="projects-grid">
+      <!-- Proyecto 1 -->
+      <div class="project-card">
+        <img src="fotos/proyecto1.jpg" alt="Proyecto 1">
+        <h3>Proyecto Profesional 1</h3>
+        <p>Breve descripción del proyecto profesional 1.</p>
+        <a href="proyecto1.html">Ver más</a>
       </div>
-      <div class="category">
-        <a href="proyectos_preprofesional.html">Proyectos Preprofesionales</a>
+
+      <!-- Proyecto 2 -->
+      <div class="project-card">
+        <img src="fotos/proyecto2.jpg" alt="Proyecto 2">
+        <h3>Proyecto Preprofesional 2</h3>
+        <p>Breve descripción del proyecto preprofesional 2.</p>
+        <a href="proyecto2.html">Ver más</a>
       </div>
-      <div class="category">
-        <a href="proyectos_academico.html">Proyectos Académicos</a>
+
+      <!-- Proyecto 3 -->
+      <div class="project-card">
+        <img src="fotos/proyecto3.jpg" alt="Proyecto 3">
+        <h3>Proyecto Académico 3</h3>
+        <p>Breve descripción del proyecto académico 3.</p>
+        <a href="proyecto3.html">Ver más</a>
       </div>
     </div>
   </main>
