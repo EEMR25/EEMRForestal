@@ -3,36 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formación - EEMR Forestal</title>
-  <link rel="stylesheet" href="css/style.css"> mira el estilo que llevaba
+  <title>M.C. Erick Mendoza</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    hr {
-      border: none;
-      border-top: 2px solid #ccc;
-      margin: 20px 0;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8f4; /* Fondo verde claro */
+      color: #333;
     }
 
-    .fixed-images {
-      position: fixed;
-      top: 30%; /* Centrado verticalmente en la pantalla */
-      right: 20px; /* Distancia desde el borde derecho */
-      transform: translateY(-50%); /* Ajuste para centrar correctamente */
+    header {
+      background-color: #2e7d32; /* Verde oscuro */
+      color: #fff;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
-      flex-direction: column;
-      gap: 15px; /* Espaciado entre las imágenes */
+      justify-content: center;
+      gap: 20px;
     }
 
-    .fixed-images img {
-      width: 150px; /* Tamaño de las imágenes */
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      padding: 8px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #388e3c; /* Verde más brillante */
+      border-radius: 5px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2e7d32; /* Verde oscuro */
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555; /* Gris medio */
+      margin: 20px auto;
+      max-width: 800px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    ul li {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
       height: auto;
-      border-radius: 10px; /* Bordes redondeados */
+      border-radius: 10px;
+      cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
-    .fixed-images img:hover {
-      transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #2e7d32; /* Verde oscuro */
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -50,76 +120,41 @@
 
   <main>
     <section>
-      <h1>Formación</h1>
-      <ul>
-        <li><strong>Licenciatura:</strong> Ingeniería Forestal - Universidad Autónoma Chapingo (2016-2020)</li>
-      </ul>
-      <hr> <!-- Línea de separación -->
-      <ul>
-        <li><strong>Maestría:</strong> Ciencias Forestales - Universidad Autónoma Chapingo (2021-2023)</li>
-      </ul>
-      <hr> <!-- Línea de separación -->
-      <ul>
-        <li><strong>Doctorado:</strong> Ciencias de Información Geoespacial - Centro Geo (2024-2028)</li>
-      </ul>
-      <hr> <!-- Línea de separación -->
-      <ul>
-        <li><strong>Cursos:</strong> Curso básico teórico-práctico de prevención y combate de incendios forestales (Marzo 2024), Introducción al uso y representación de información geoespacial (Junio y Julio 2024)</li>
-      </ul>
-      <hr> <!-- Línea de separación -->
-      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-        <ul style="flex: 1; list-style: none; padding: 0;">
-          <li>🌳 Dendrología</li>
-          <li>📊 Estadística (regresión lineal multivariada, diseño experimental y de muestreo)</li>
-          <li>💻 Programación (Python, VBasic y HTML)</li>
-          <li>🏢 Administración de empresas y emprendimientos</li>
-          <li>🪵 Anatomía y tecnología de la madera</li>
-          <li>🖥️ Diseño asistido por computadora</li>
-          <li>🌱 Edafología forestal</li>
-          <li>📚 Investigación de operaciones</li>
-          <li>🌲 Ecología forestal</li>
-          <li>📏 Epidometría</li>
-          <li>📸 Fotogrametría</li>
-          <li>🗺️ Sistemas de información geográfica</li>
-          <li>🗾 Fitogeografía</li>
-          <li>🚜 Maquinaria forestal</li>
-          <li>📈 Fundamentos de mercadotecnia</li>
-          <li>🛰️ Percepción remota</li>
-        </ul>
-        <ul style="flex: 1; list-style: none; padding: 0;">
-          <li>🦉 Administración de fauna silvestre</li>
-          <li>🌿 Sanidad forestal</li>
-          <li>🌍 Administración y evaluación de recursos naturales</li>
-          <li>⚙️ Ingeniería del trabajo</li>
-          <li>🌾 Agroforestería</li>
-          <li>🏙️ Dasonomía urbana</li>
-          <li>📝 Evaluación de impacto ambiental</li>
-          <li>🛣️ Ingeniería de caminos forestales</li>
-          <li>🚛 Sistemas de abastecimiento forestal</li>
-          <li>🔥 Ecología del fuego</li>
-          <li>🪲 Control biológico</li>
-          <li>🏞️ Ecología del paisaje</li>
-          <li>🌱 Calidad de planta y viveros</li>
-          <li>🌳 Reforestación</li>
-          <li>🌲 Silvicultura ecológica</li>
-          <li>🌴 Silvicultura de plantaciones</li>
-          <li>📋 Producción y rendimiento de rodales</li>
-          <li>🌳 Arboricultura</li>
-          <li>🖼️ Análisis digital de imágenes</li>
-          <li>💾 Bases de datos</li>
-        </ul>
+      <h1>Erick Eduardo Mendoza Ruiz</h1>
+      <p>Soy un profesional del sector forestal apasionado por la naturaleza y comprometido en c. 
+        Desde 2019, he trabajado como especialista en impacto ambiental, desarrollando estrategias de diagnóstico y prescripción. 
+        También cuento con experiencia en muestreo de vegetación, aplicando metodologías avanzadas para la recopilación y análisis de datos ecológicos.
+        Mi formación académica incluye una Ingeniería Forestal y una Maestría en Ciencias Forestales, con un enfoque en hidrología, ecología del paisaje y del fuego, áreas en las que he centrado mi trabajo de investigación en la Sierra de Guadalupe. 
+        Actualmente, curso el Doctorado en Ciencias de Información Geográfica, donde me especializo en tecnologías avanzadas como el análisis de datos LiDAR, que permiten abordar desafíos complejos relacionados con la gestión y conservación de los recursos naturales.
+      </p>
+    </section>
+
+    <ul>
+      <li>📊 Análisis de datos (espacial y estadístico)</li>
+      <li>🌧️ Hidrología forestal</li>
+      <li>🌳 Manejo forestal</li>
+      <li>🔥 Ecología del fuego</li>
+      <li>🛠 Evaluación de impacto ambiental</li>
+      <li>🌐 Procesamiento de datos geoespaciales</li>
+    </ul>
+
+    <section>
+      <h2>Galería de Imágenes</h2>
+      <div class="gallery">
+        <img src="fotos/i1.JPG" alt="Descripción de la imagen 1">
+        <img src="fotos/i2.JPG" alt="Descripción de la imagen 2">
+        <img src="fotos/i3.JPG" alt="Descripción de la imagen 3">
+        <img src="fotos/i4.jpg" alt="Descripción de la imagen 4">
+        <img src="fotos/i5.JPG" alt="Descripción de la imagen 5">
+        <img src="fotos/i6.JPG" alt="Descripción de la imagen 6">
+        <img src="fotos/i7.jpg" alt="Descripción de la imagen 7">
+        <img src="fotos/i8.jpg" alt="Descripción de la imagen 8">
       </div>
     </section>
   </main>
 
-  <!-- Imágenes fijas a la derecha -->
-  <div class="fixed-images">
-    <img src="fotos/log1.png" alt="Imagen 1">
-    <img src="fotos/log2.png" alt="Imagen 2">
-  </div>
-
   <footer>
-    <p>&copy; 2025 EEMR Forestal. Todos los derechos reservados.</p>
+    <p>&copy; Contacto: 5536366287. mcerickmendoza23@gmail.com.</p>
   </footer>
 </body>
 </html>
