@@ -58,68 +58,39 @@
 
     h1 {
       color: #2e7d32; /* Verde oscuro */
-      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: 2rem;
     }
 
     p {
       font-size: 1.1rem;
       color: #555; /* Gris medio */
-      margin-bottom: 30px;
+      margin: 20px auto;
+      max-width: 800px; /* Limitar ancho para mejor legibilidad */
+      line-height: 1.6;
     }
 
-    /* Diseño de las tarjetas de proyectos */
-    .projects-grid {
+    /* Galería de imágenes */
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
-      justify-content: center;
+      margin-top: 30px;
+      justify-items: center;
     }
 
-    .project-card {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-      overflow: hidden;
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .project-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .project-card h3 {
-      font-size: 1.2rem;
-      color: #2e7d32; /* Verde oscuro */
-      margin: 15px;
-    }
-
-    .project-card p {
-      font-size: 1rem;
-      color: #555;
-      margin: 0 15px 15px;
-    }
-
-    .project-card a {
-      display: inline-block;
-      margin: 15px;
-      padding: 10px 20px;
-      background-color: #388e3c; /* Verde principal */
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .project-card a:hover {
-      background-color: #1b5e20; /* Verde más oscuro */
+    .gallery img:hover {
+      transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     }
 
     footer {
@@ -146,33 +117,17 @@
   </nav>
 
   <main>
-    <h1>Proyectos Profesionales</h1>
-    <p>A continuación, se presentan tres proyectos destacados: MNA, Impacto Ambiental y Selva Maya.</p>
-    
-    <div class="projects-grid">
-      <!-- Proyecto MNA -->
-      <div class="project-card">
-        <img src="fotos/mna.jpg" alt="Proyecto MNA">
-        <h3>MNA</h3>
-        <p>Descripción breve del proyecto MNA relacionado con la conservación y manejo de áreas naturales protegidas.</p>
-        <a href="mna.html">Ver más</a>
-      </div>
+    <h1>Manejo de Áreas Naturales (MNA)</h1>
+    <p>
+      Este proyecto se enfoca en la conservación y manejo sustentable de áreas naturales protegidas,
+      promoviendo la biodiversidad y el desarrollo sostenible en comunidades locales. 
+      Se implementaron estrategias innovadoras para la restauración ecológica y la mitigación de impactos ambientales.
+    </p>
 
-      <!-- Proyecto Impacto Ambiental -->
-      <div class="project-card">
-        <img src="fotos/impacto_ambiental.jpg" alt="Impacto Ambiental">
-        <h3>Impacto Ambiental</h3>
-        <p>Evaluación y mitigación de impactos ambientales en proyectos de desarrollo.</p>
-        <a href="impacto_ambiental.html">Ver más</a>
-      </div>
-
-      <!-- Proyecto Selva Maya -->
-      <div class="project-card">
-        <img src="fotos/selva_maya.jpg" alt="Selva Maya">
-        <h3>Selva Maya</h3>
-        <p>Estudio integral de la biodiversidad y recursos forestales en la Selva Maya.</p>
-        <a href="selva_maya.html">Ver más</a>
-      </div>
+    <div class="gallery">
+      <img src="fotos/mna1.jpg" alt="Imagen 1 del proyecto MNA">
+      <img src="fotos/mna2.jpg" alt="Imagen 2 del proyecto MNA">
+      <img src="fotos/mna3.jpg" alt="Imagen 3 del proyecto MNA">
     </div>
   </main>
 
