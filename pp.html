@@ -25,13 +25,13 @@
 
     main {
       padding: 20px;
-      text-align: center;
     }
 
     h1 {
       color: #2e7d32; /* Verde oscuro */
-      margin-top: 20px;
       font-size: 2rem;
+      margin-top: 20px;
+      text-align: center;
     }
 
     p {
@@ -40,6 +40,7 @@
       margin: 20px auto;
       max-width: 800px; /* Limitar ancho para mejor legibilidad */
       line-height: 1.6;
+      text-align: center;
     }
 
     hr {
@@ -50,16 +51,16 @@
 
     /* Galería de imágenes */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
-      margin-top: 30px;
-      justify-items: center;
+      margin-top: 20px;
     }
 
     .gallery img {
       width: 100%;
-      max-width: 300px;
+      max-width: 300px; /* Tamaño máximo para las imágenes */
       height: auto;
       border-radius: 10px; /* Bordes redondeados */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -124,6 +125,7 @@
       <img src="fotos/deslinde2.jpg" alt="Imagen 2 del proyecto Deslinde">
       <img src="fotos/deslinde3.jpg" alt="Imagen 3 del proyecto Deslinde">
     </div>
+    <hr>
   </main>
 
   <footer>
