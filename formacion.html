@@ -112,6 +112,23 @@
       align-items: center;
     }
 
+        .knowledge-lists ul {
+      text-align: justify;
+    }
+
+    /* Reducir tamaño de las imágenes fijas */
+    .fixed-images img {
+      width: 8px; /* Disminuir tamaño a una vigésima parte */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .fixed-images img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
     .modal img {
       max-width: 90%;
       max-height: 90%;
