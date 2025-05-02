@@ -3,24 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formación - EEMR Forestal</title>
+  <title>M.C. Erick Mendoza</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Estilo global */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f8f4; /* Fondo uniforme */
-      color: #333; /* Texto en gris oscuro */
-      line-height: 1.6;
+      background-color: #f4f8f4; /* Fondo verde claro */
+      color: #333;
     }
 
     header, footer {
       background-color: #2e7d32; /* Verde oscuro uniforme */
       color: #fff; /* Texto blanco */
-      text-align: center;
       padding: 15px 0;
+      text-align: center;
+      font-family: Arial, sans-serif; /* Tipo de letra uniforme */
     }
 
     nav ul {
@@ -30,7 +29,6 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      background-color: #388e3c; /* Verde principal */
     }
 
     nav ul li {
@@ -43,108 +41,100 @@
       font-size: 1rem;
       padding: 8px 15px;
       transition: background-color 0.3s ease;
-      border-radius: 5px;
     }
 
     nav ul li a:hover {
-      background-color: #1b5e20; /* Verde más oscuro */
+      background-color: #388e3c; /* Verde más brillante */
+      border-radius: 5px;
     }
 
     main {
       padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: justify; /* Justificado */
     }
 
-    h1, h2 {
+    h1 {
       color: #2e7d32; /* Verde oscuro */
+      font-size: 2rem;
       text-align: center;
     }
 
     p {
       font-size: 1.1rem;
-      margin: 20px 0;
+      color: #333; /* Texto negro */
+      margin: 20px auto;
+      max-width: 800px;
+      line-height: 1.6;
+      text-align: justify; /* Justificar el texto */
     }
 
     ul {
       list-style: none;
       padding: 0;
-      text-align: justify;
+      margin: 20px auto;
+      text-align: center;
     }
 
     ul li {
+      font-size: 1.2rem;
       margin: 10px 0;
     }
 
-    hr {
-      border: none;
-      border-top: 2px solid #ccc;
-      margin: 20px 0;
-    }
-
-    /* Estilo para galerías */
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
     }
 
     .gallery img {
       width: 100%;
-      max-width: 300px;
       height: auto;
       border-radius: 10px;
+      cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
     }
 
-    /* Imágenes fijas */
-    .fixed-images {
+    /* Modal para expandir imágenes */
+    .modal {
+      display: none;
       position: fixed;
-      top: 30%;
-      right: 20px;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
     }
 
-    .fixed-images img {
-      width: 150px;
-      height: auto;
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .fixed-images img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    .modal.active {
+      display: flex;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Formación - EEMR Forestal</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="formacion.html">Formación</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="formacion.html">Formación</a></li>
-      <li><a href="proyectos.html">Proyectos</a></li>
-      <li><a href="publicaciones.html">Publicaciones</a></li>
-    </ul>
-  </nav>
-
+  
   <main>
     <section>
       <h1>Formación</h1>
