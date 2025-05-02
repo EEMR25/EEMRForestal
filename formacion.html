@@ -52,9 +52,8 @@
       padding: 20px;
     }
 
-    h1 {
+    h1, h2 {
       color: #2e7d32; /* Verde oscuro */
-      font-size: 2rem;
       text-align: center;
     }
 
@@ -75,8 +74,9 @@
     }
 
     ul li {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 10px 0;
+      text-align: justify; /* Justificar cada elemento de la lista */
     }
 
     .gallery {
@@ -112,10 +112,20 @@
       align-items: center;
     }
 
-        .knowledge-lists ul {
-      text-align: justify;
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
     }
 
+    .modal.active {
+      display: flex;
+    }
+
+    .knowledge-lists ul {
+      text-align: justify;
+    }
+    
     /* Reducir tamaño de las imágenes fijas */
     .fixed-images img {
       width: 8px; /* Disminuir tamaño a una vigésima parte */
@@ -128,15 +138,6 @@
     .fixed-images img:hover {
       transform: scale(1.1);
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-
-    .modal.active {
-      display: flex;
     }
   </style>
 </head>
