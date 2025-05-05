@@ -14,10 +14,10 @@ body {
 
 nav ul {
   display: flex;
+  justify-content: flex-start;
   list-style: none;
   background-color: var(--primary-green);
   margin: 0;
-  justify-content: flex-start;
   padding: 10px;
 }
 
