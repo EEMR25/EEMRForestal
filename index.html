@@ -92,7 +92,7 @@
     </nav>
   </header>
 
-  <main>
+   <main>
     <section>
       <h1>Erick Eduardo Mendoza Ruiz</h1>
       <p>
@@ -103,10 +103,54 @@
         Actualmente, curso el Doctorado en Ciencias de Información Geográfica, donde me especializo en tecnologías avanzadas como el análisis de datos LiDAR, que permiten abordar desafíos complejos relacionados con la gestión y conservación de los recursos naturales.
       </p>
     </section>
+
+    <ul>
+      <li>📊 Análisis de datos (espacial y estadístico)</li>
+      <li>🌧️ Hidrología forestal</li>
+      <li>🌳 Manejo forestal</li>
+      <li>🔥 Ecología del fuego</li>
+      <li>🛠 Evaluación de impacto ambiental</li>
+      <li>🌐 Procesamiento de datos geoespaciales</li>
+    </ul>
+
+    <section>
+      <h2>Galería de Imágenes</h2>
+      <div class="gallery">
+        <img src="fotos/i1.JPG" alt="Descripción de la imagen 1">
+        <img src="fotos/i2.JPG" alt="Descripción de la imagen 2">
+        <img src="fotos/i3.JPG" alt="Descripción de la imagen 3">
+        <img src="fotos/i4.jpg" alt="Descripción de la imagen 4">
+        <img src="fotos/i5.JPG" alt="Descripción de la imagen 5">
+        <img src="fotos/I6.JPG" alt="Descripción de la imagen 6">
+        <img src="fotos/i7.jpg" alt="Descripción de la imagen 7">
+        <img src="fotos/i8.jpg" alt="Descripción de la imagen 8">
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; Contacto: 5536366287. mcerickmendoza23@gmail.com.</p>
   </footer>
+
+  <div class="modal" id="modal">
+    <img src="" alt="Imagen ampliada" id="modalImage">
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    const images = document.querySelectorAll('.gallery img');
+
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        modalImage.src = image.src;
+        modal.classList.add('active');
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
 </body>
 </html>
