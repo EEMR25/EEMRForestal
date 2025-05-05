@@ -63,18 +63,32 @@
       text-align: justify;
     }
 
+    ul.skills {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    ul.skills li {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
     /* Estilos para la galería */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Ajusta el tamaño de las columnas */
+      grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
       gap: 15px;
       padding: 20px;
+      justify-items: center;
     }
 
     .gallery img {
       width: auto;
-      max-width: 50px; /* Ajustado a un tamaño pequeño (5% del tamaño aproximado) */
-      max-height: 50px; /* Limita la altura también */
+      max-width: 50px; /* Tamaño pequeño */
+      max-height: 50px;
       border-radius: 10px;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -82,7 +96,7 @@
     }
 
     .gallery img:hover {
-      transform: scale(1.5); /* Crecimiento más evidente al pasar el cursor */
+      transform: scale(1.5); /* Crecimiento al pasar el mouse */
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
@@ -129,8 +143,19 @@
         Soy un profesional del sector forestal apasionado por la naturaleza y comprometido con su conservación. 
         Desde 2019, he trabajado como especialista en impacto ambiental, desarrollando estrategias de diagnóstico y prescripción. 
         También cuento con experiencia en muestreo de vegetación, aplicando metodologías avanzadas para la recopilación y análisis de datos ecológicos.
+        Mi formación académica incluye una Ingeniería Forestal y una Maestría en Ciencias Forestales, con un enfoque en hidrología, ecología del paisaje y del fuego, áreas en las que he centrado mi trabajo de investigación en la Sierra de Guadalupe. 
+        Actualmente, curso el Doctorado en Ciencias de Información Geográfica, donde me especializo en tecnologías avanzadas como el análisis de datos LiDAR, que permiten abordar desafíos complejos relacionados con la gestión y conservación de los recursos naturales.
       </p>
     </section>
+
+    <ul class="skills">
+      <li>📊 Análisis de datos (espacial y estadístico)</li>
+      <li>🌧️ Hidrología forestal</li>
+      <li>🌳 Manejo forestal</li>
+      <li>🔥 Ecología del fuego</li>
+      <li>🛠 Evaluación de impacto ambiental</li>
+      <li>🌐 Procesamiento de datos geoespaciales</li>
+    </ul>
 
     <section>
       <h2>Galería de Imágenes</h2>
