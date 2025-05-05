@@ -44,11 +44,6 @@
       border-radius: 5px;
     }
 
-    footer p {
-      margin: 0; /* Elimina márgenes innecesarios */
-      color: #fff; /* Forzar texto blanco */
-    }
-    
     main {
       padding: 20px;
     }
@@ -85,14 +80,14 @@
     .gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
-      gap: 10px; /* Espaciado mínimo entre imágenes */
+      gap: 10px; /* Reducir el espacio entre imágenes */
       padding: 20px;
       justify-items: center;
     }
 
     .gallery img {
-      width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
-      max-width: 200px; /* Tamaño de las imágenes */
+      width: auto;
+      max-width: 200px; /* Tamaño aumentado a 200px */
       max-height: 200px;
       border-radius: 10px;
       cursor: pointer;
@@ -162,6 +157,7 @@
     </ul>
 
     <section>
+      <h2>Galería de Imágenes</h2>
       <div class="gallery">
         <img src="fotos/i1.JPG" alt="Descripción de la imagen 1">
         <img src="fotos/i2.JPG" alt="Descripción de la imagen 2">
