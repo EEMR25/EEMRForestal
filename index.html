@@ -95,26 +95,29 @@
     }
 
     /* Estilos para la galería */
-  .gallery {
-    display: grid; /* Activa el modo grid */
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
-    gap: 0; /* Sin espacio entre imágenes */
-    padding: 0; /* Sin relleno en el contenedor */
-    margin: 0; /* Sin márgenes en el contenedor */
-  }
+    .gallery {
+      display: grid; /* Activa el modo grid */
+      grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+      gap: 0; /* Sin espacio entre imágenes */
+      padding: 0; /* Sin relleno en el contenedor */
+      margin: 0; /* Sin márgenes en el contenedor */
+    }
 
-  .gallery img {
-    width: 100%; /* Las imágenes llenan su celda completamente */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    display: block; /* Elimina espacios en línea alrededor de las imágenes */
-    margin: 0; /* Sin márgenes */
-    padding: 0; /* Sin relleno */
-    border: none; /* Sin bordes */
-  }
+    .gallery img {
+      width: 100%; /* Las imágenes llenan su celda completamente */
+      height: auto; /* Mantiene la proporción de las imágenes */
+      display: block; /* Elimina espacios en línea alrededor de las imágenes */
+      margin: 0; /* Sin márgenes */
+      padding: 0; /* Sin relleno */
+      border: none; /* Sin bordes */
+      border-radius: 10px; /* Bordes redondeados, ajusta el valor según quieras */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
 
     .gallery img:hover {
       transform: scale(1.1); /* Crecimiento al pasar el mouse */
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
     }
 
     /* Modal para imágenes ampliadas */
