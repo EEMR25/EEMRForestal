@@ -95,22 +95,22 @@
     }
 
     /* Estilos para la galería */
-    .gallery {
-      display: block;
-      grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
-      gap: 0px; /* Reducir el espacio entre imágenes */
-      padding: 0px;
-    }
+  .gallery {
+    display: grid; /* Activa el modo grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    gap: 0; /* Sin espacio entre imágenes */
+    padding: 0; /* Sin relleno en el contenedor */
+    margin: 0; /* Sin márgenes en el contenedor */
+  }
 
-    .gallery img {
-      width: 100%;
-      max-width: 200px; /* Tamaño aumentado a 200px */
-      max-height: 200px;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  .gallery img {
+    width: 100%; /* Las imágenes llenan su celda completamente */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Elimina espacios en línea alrededor de las imágenes */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
+    border: none; /* Sin bordes */
+  }
 
     .gallery img:hover {
       transform: scale(1.1); /* Crecimiento al pasar el mouse */
