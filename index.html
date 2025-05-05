@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M.C. Erick Mendoza</title>
   <style>
+    /* Estilos globales */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f8f4; /* Fondo verde claro */
+      background-color: #f4f8f4;
       color: #333;
     }
 
     header, footer {
-      background-color: #2e7d32; /* Verde oscuro uniforme */
-      color: #fff; /* Texto blanco */
+      background-color: #2e7d32;
+      color: #fff;
       padding: 15px 0;
       text-align: center;
     }
@@ -25,12 +26,9 @@
       padding: 0;
       margin: 0;
       display: flex;
-      justify-content: flex-start; /* Alinea los ítems a la izquierda */
+      justify-content: flex-start;
       gap: 20px;
-    }
-
-    nav ul li {
-      display: inline;
+      padding-left: 20px;
     }
 
     nav ul li a {
@@ -42,7 +40,7 @@
     }
 
     nav ul li a:hover {
-      background-color: #388e3c; /* Verde más brillante */
+      background-color: #388e3c;
       border-radius: 5px;
     }
 
@@ -51,31 +49,32 @@
     }
 
     h1 {
-      color: #2e7d32; /* Verde oscuro */
+      color: #2e7d32;
       font-size: 2rem;
       text-align: center;
     }
 
     p {
       font-size: 1.1rem;
-      color: #333; /* Texto negro */
+      color: #333;
       margin: 20px auto;
       max-width: 800px;
       line-height: 1.6;
-      text-align: justify; /* Justificar el texto */
+      text-align: justify;
     }
 
+    /* Estilos para la galería */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Ajusta el tamaño de las columnas */
       gap: 15px;
       padding: 20px;
     }
 
     .gallery img {
       width: auto;
-      max-width: 250px;
-      max-height: 250px;
+      max-width: 50px; /* Ajustado a un tamaño pequeño (5% del tamaño aproximado) */
+      max-height: 50px; /* Limita la altura también */
       border-radius: 10px;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -83,10 +82,11 @@
     }
 
     .gallery img:hover {
-      transform: scale(1.1); /* Crecimiento más evidente */
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+      transform: scale(1.5); /* Crecimiento más evidente al pasar el cursor */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
+    /* Modal para imágenes ampliadas */
     .modal {
       display: none;
       position: fixed;
@@ -107,11 +107,6 @@
 
     .modal.active {
       display: flex;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px 0;
     }
   </style>
 </head>
