@@ -47,6 +47,7 @@
     footer p {
       margin: 0; /* Elimina márgenes innecesarios */
       color: #fff; /* Forzar texto blanco */
+    }
     
     main {
       padding: 20px;
@@ -60,7 +61,7 @@
 
     p {
       font-size: 1.1rem;
-      color: #fff;
+      color: #333;
       margin: 20px auto;
       max-width: 800px;
       line-height: 1.6;
@@ -84,15 +85,15 @@
     .gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
-      gap: 10px; /* Reducir el espacio entre imágenes */
+      gap: 10px; /* Espaciado mínimo entre imágenes */
       padding: 20px;
       justify-items: center;
     }
 
     .gallery img {
-      width: auto;
-      max-width: 10px; /* Tamaño aumentado a 200px */
-      max-height: 10px;
+      width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
+      max-width: 200px; /* Tamaño de las imágenes */
+      max-height: 200px;
       border-radius: 10px;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
