@@ -98,14 +98,15 @@
     /* Estilo para imágenes fijas */
     .fixed-images {
       position: fixed;
-      top: 50%; /* Centrar verticalmente */
-      right: 20px; /* Alineado a la derecha */
-      transform: translateY(-50%); /* Ajuste para centrar */
+      bottom: 20px; /* Alineado a la parte inferior */
+      left: 50%; /* Centrado horizontalmente en la pantalla */
+      transform: translateX(-50%); /* Ajuste para centrar */
       display: flex;
-      flex-direction: column;
-      align-items: flex-end; /* Centra las imágenes en su contenedor */
+      flex-direction: row; /* Cambia a disposición horizontal */
+      justify-content: center; /* Centro horizontalmente */
+      align-items: center; /* Alinea verticalmente */
       gap: 15px; /* Espaciado entre las imágenes */
-    }
+    }  
 
     .fixed-images img {
       width: 250px; /* Tamaño de las imágenes */
