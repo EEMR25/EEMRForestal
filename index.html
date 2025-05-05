@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M.C. Erick Mendoza</title>
-  <link rel="stylesheet" href="css/style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -19,7 +18,6 @@
       color: #fff; /* Texto blanco */
       padding: 15px 0;
       text-align: center;
-      font-family: Arial, sans-serif; /* Tipo de letra uniforme */
     }
 
     nav ul {
@@ -67,19 +65,7 @@
       text-align: justify; /* Justificar el texto */
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 20px auto;
-      text-align: center;
-    }
-
-    ul li {
-      font-size: 1.2rem;
-      margin: 10px 0;
-    }
-
-        .gallery {
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 15px;
@@ -87,19 +73,20 @@
     }
 
     .gallery img {
-      width: 100%;
-      height: auto;
+      width: auto;
+      max-width: 250px;
+      max-height: 250px;
       border-radius: 10px;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.05);
+      transform: scale(1.1); /* Crecimiento más evidente */
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
     }
 
-    /* Modal para expandir imágenes */
     .modal {
       display: none;
       position: fixed;
@@ -121,6 +108,11 @@
     .modal.active {
       display: flex;
     }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+    }
   </style>
 </head>
 <body>
@@ -135,26 +127,15 @@
     </nav>
   </header>
 
-   <main>
+  <main>
     <section>
       <h1>Erick Eduardo Mendoza Ruiz</h1>
       <p>
         Soy un profesional del sector forestal apasionado por la naturaleza y comprometido con su conservación. 
         Desde 2019, he trabajado como especialista en impacto ambiental, desarrollando estrategias de diagnóstico y prescripción. 
         También cuento con experiencia en muestreo de vegetación, aplicando metodologías avanzadas para la recopilación y análisis de datos ecológicos.
-        Mi formación académica incluye una Ingeniería Forestal y una Maestría en Ciencias Forestales, con un enfoque en hidrología, ecología del paisaje y del fuego, áreas en las que he centrado mi trabajo de investigación en la Sierra de Guadalupe. 
-        Actualmente, curso el Doctorado en Ciencias de Información Geográfica, donde me especializo en tecnologías avanzadas como el análisis de datos LiDAR, que permiten abordar desafíos complejos relacionados con la gestión y conservación de los recursos naturales.
       </p>
     </section>
-
-    <ul>
-      <li>📊 Análisis de datos (espacial y estadístico)</li>
-      <li>🌧️ Hidrología forestal</li>
-      <li>🌳 Manejo forestal</li>
-      <li>🔥 Ecología del fuego</li>
-      <li>🛠 Evaluación de impacto ambiental</li>
-      <li>🌐 Procesamiento de datos geoespaciales</li>
-    </ul>
 
     <section>
       <h2>Galería de Imágenes</h2>
