@@ -97,28 +97,24 @@
 
     /* Estilo para imágenes fijas */
     .fixed-images {
-      position: fixed;
-      bottom: 20px; /* Alineado a la parte inferior */
-      left: 50%; /* Centrado horizontalmente en la pantalla */
-      transform: translateX(-50%); /* Ajuste para centrar */
+      position: static; /* Cambiado de fixed a static */
       display: flex;
-      flex-direction: row; /* Cambia a disposición horizontal */
-      justify-content: center; /* Centro horizontalmente */
-      align-items: center; /* Alinea verticalmente */
+      flex-direction: row; /* Coloca las imágenes una al lado de otra */
+      justify-content: center; /* Centra las imágenes horizontalmente */
       gap: 15px; /* Espaciado entre las imágenes */
-    }  
-
-    .fixed-images img {
-      width: 250px; /* Tamaño de las imágenes */
-      height: auto;
-      border-radius: 10px; /* Bordes redondeados */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px; /* Separación desde el contenido superior */
     }
-
+    
+    .fixed-images img {
+      width: 50px; /* Ajusta el tamaño de las imágenes */
+      height: auto; /* Mantén la proporción */
+      border-radius: 10px; /* Bordes redondeados */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto al pasar el mouse */
+    }
+    
     .fixed-images img:hover {
-      transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.2); /* Efecto de zoom al pasar el mouse */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
     }
   </style>
 </head>
