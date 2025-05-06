@@ -19,7 +19,6 @@
       color: #fff; /* Texto blanco */
       padding: 15px 0;
       text-align: center;
-      font-family: Arial, sans-serif; /* Tipo de letra uniforme */
     }
 
     footer p {
@@ -36,8 +35,9 @@
       padding: 0;
       margin: 0;
       display: flex;
-      justify-content: center;
-      gap: 20px;
+      justify-content: flex-start;
+      gap: 10px;
+      padding-left: 20px;
     }
 
     nav ul li {
@@ -59,13 +59,11 @@
 
     main {
       padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: justify; /* Justificado */
     }
 
     h1, h2 {
       color: #2e7d32; /* Verde oscuro */
+      font-size: 2rem;
       text-align: center;
     }
 
@@ -89,6 +87,19 @@
       margin: 10px 0;
     }
 
+     ul.skills {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    ul.skills li {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
     hr {
       border: none;
       border-top: 2px solid #ccc;
@@ -106,7 +117,7 @@
     }
     
     .fixed-images img {
-      width: 50px; /* Ajusta el tamaño de las imágenes */
+      width: 150px; /* Ajusta el tamaño de las imágenes */
       height: auto; /* Mantén la proporción */
       border-radius: 10px; /* Bordes redondeados */
       transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto al pasar el mouse */
