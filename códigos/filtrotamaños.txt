@@ -1,0 +1,21 @@
+import processing
+
+from qgis.core import QgsRasterLayer, QgsProject
+
+ruta_raster = r"C:\Users\eredm\Desktop\Trabajo\ZMVM\raster\2025\unmix\unmix25final.tif"
+
+raster = QgsRasterLayer(ruta_raster, "raster_binario")
+
+raster.isValid()
+
+QgsProject.instance().addMapLayer(raster)
+
+resultado = processing.run("gdal:sieve", {
+    'INPUT': raster,
+    'THRESHOLD': 4,
+    'CONNECTIVITY': 8,
+    'NO_MASK': False,
+    'MASK_LAYER': None,
+    'OUTPUT': 'TEMPORARY_OUTPUT'
+})
+

@@ -1,0 +1,93 @@
+// Cargar polígono de recorte
+var lwgs = ee.FeatureCollection('projects/ee-alemendoza/assets/lwgs');
+Map.addLayer(lwgs, {color: 'red'}, 'Área de estudio');
+
+// Filtrar imagen Sentinel-2 de junio 2019
+var imagen = imageCollection
+  .filterDate('2019-07-01', '2019-07-30')
+  .filterBounds(lwgs)
+  .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 20))
+  .first()
+  .select('B[1-7]');
+  
+
+// Recortar la imagen usando el polígono
+var rec = imagen;
+Map.centerObject(lwgs, 12);
+Map.addLayer(rec, {bands: ['B4', 'B3', 'B2'], min: 0, max: 3000}, 'Sentinel-2 junio 2019');
+
+// Cargar la imagen de clasificación real (rewgs)
+var clasificacionReal_float = ee.Image('projects/ee-alemendoza/assets/rewgs'); // Cargar la imagen de clasificación real (rewgs)
+var clasificacionReal = clasificacionReal_float.toInt();
+
+var spec = require('users/jsilvan/modules:spec');
+
+// Cargar el Shapefile
+var training = table2.merge(table3)
+.merge(table4)
+.merge(table5)
+.merge(table10)
+.merge(table9)
+.merge(table8)
+.merge(table11)
+.merge(table12)
+.merge(table13)
+.merge(table14)
+.merge(table15)
+.merge(table16)
+.merge(table17)
+.merge(table21)
+Map.addLayer(training,{}, 'entrenamiento')
+Map.centerObject(training)
+
+spec.SetSample(training,630,30);
+
+// Aplica la transformación LDA     
+var LDA = spec.LDA(imagen) //spec.LDA(image,minSep)
+  .aside(print); // checa las propiedades
+
+var LDApc = LDA.normalizePCs()
+
+var rec = LDApc.clip(lwgs);
+
+// Muestras los componentes
+Map.addLayer(rec,{},'LDA');
+
+var recInt = rec.toInt();
+
+// Crear una máscara para conservar solo valores de 0 a 22
+var recFiltrado = recInt.where(recInt.lt(0), 0).where(recInt.gt(22), 0);
+
+
+// Extraer muestras de validación (píxeles de la imagen de clasificación real y de la imagen clasificada)
+var validacion = clasificacionReal.addBands(recFiltrado).sample({
+  region: lwgs, // Usamos la misma región de estudio (en este caso, el polígono 'lwgs')
+  scale: 30,
+  numPixels: 630, // Ajusta el número de píxeles a usar para la validación
+  tileScale: 12
+});
+
+var matrizConfusion = validacion.errorMatrix('b1', 'LDA1');
+
+// Imprimir la matriz de confusión
+print('Matriz de confusión:', matrizConfusion);
+
+// Calcular la exactitud global
+var exactitudGlobal = matrizConfusion.accuracy();
+print('Exactitud Global:', exactitudGlobal);
+
+// Mostrar el índice Kappa
+var kappa = matrizConfusion.kappa();
+print('Índice Kappa:', kappa);
+
+// Mostrar la matriz de confusión
+print('Matriz de confusión:', matrizConfusion.getInfo());
+
+// Precisión del usuario por clase
+var precisionUsuario = matrizConfusion.consumersAccuracy();
+print('Precisión del usuario por clase:', precisionUsuario);
+
+// Precisión del productor por clase
+var precisionProductor = matrizConfusion.producersAccuracy();
+print('Precisión del productor por clase:', precisionProductor);
+
